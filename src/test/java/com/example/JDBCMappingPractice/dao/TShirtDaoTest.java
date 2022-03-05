@@ -1,13 +1,13 @@
-package com.example.JDBCMappingPractice;
+package com.example.JDBCMappingPractice.dao;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JdbcMappingPracticeApplicationTests {
+class TShirtDaoTest {
 
 	@Test
-	void contextLoads() {
+	public void constructorCreationTest() {
 	}
 
 }

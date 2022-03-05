@@ -1,4 +1,4 @@
-package com.example.JDBCMappingPractice;
+package com.example.JDBCMappingPractice.dao;
 
 import com.example.JDBCMappingPractice.model.TShirt;
 import org.slf4j.Logger;
@@ -35,5 +35,13 @@ public class TShirtJdbcDao implements TShirtDao<TShirt> {
     public List<TShirt> findAll() {
         String sql = "SELECT id, price, color, description, size, is_on_sale, is_sold_out FROM tshirts";
         return jdbcTemplate.query(sql, rowMapper);
+    }
+    
+    //TODO: THIS NEEDS WORK
+    @Override
+    public TShirt insertTShirt(TShirt tShirt) {
+        String sql = " INSERT INTO tshirts (id, price, color, description, size, is_on_sale, is_sold_out) VALUES(default, ? , ? , ? , ? , ? , ?)";
+        jdbcTemplate.execute(sql);
+        return null;
     }
 }
